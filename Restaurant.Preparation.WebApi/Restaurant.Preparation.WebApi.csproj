@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>228c56c9-d554-410f-8f13-0298f7fe6708</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.23.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Restaurant.Preparation.Application\Restaurant.Preparation.Application.csproj" />
+    <ProjectReference Include="..\Restaurant.Preparation.Data\Restaurant.Preparation.Data.csproj" />
+    <ProjectReference Include="..\Restaurant.Preparation.ExternalServices\Restaurant.Preparation.ExternalServices.csproj" />
+    <ProjectReference Include="..\Restaurant.Preparation.Facade\Restaurant.Preparation.Facade.csproj" />
+    <ProjectReference Include="..\Restaurant.Preparation.Model\Restaurant.Preparation.Model.csproj" />
+    <ProjectReference Include="..\Restaurant.Preparation.Presenter\Restaurant.Preparation.Presenter.csproj" />
+  </ItemGroup>
+
+</Project>

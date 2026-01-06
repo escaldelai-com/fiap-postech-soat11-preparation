@@ -4,6 +4,7 @@ using Restaurant.Preparation.ExternalServices;
 using Restaurant.Preparation.Facade;
 using Restaurant.Preparation.Presenter;
 using Restaurant.Preparation.WebApi.Middleware;
+using Restaurant.Preparation.WebApi;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,6 +17,8 @@ builder.Services
     .AddExternalServices()
     .AddApplication()
     .AddFacade()
+    .AddAuthentication(builder.Configuration)
+    .AddRestaurantAuthorization()
     .AddOpenApi();
 
 

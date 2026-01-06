@@ -30,6 +30,18 @@ public class OrderRepository(
         return mapper.Map<OrderDto>(entity);
     }
 
+    public async Task<IEnumerable<OrderDto>> GetListByStatuses(params string[] statuses)
+    {
+        var filter = Builders<OrderData>.Filter
+            .In(x => x.Status, statuses);
+
+        var entities = await collection
+            .Find(filter)
+            .ToListAsync();
+
+        return mapper.Map<IEnumerable<OrderDto>>(entities);
+    }
+
     public async Task<OrderDto> Create(OrderDto order)
     {
         var entity = mapper.Map<OrderData>(order);

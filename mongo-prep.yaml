@@ -1,0 +1,52 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: mongo-prep
+  labels:
+    app: mongo-prep
+spec:
+  serviceName: mongo-prep
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mongo-prep
+  template:
+    metadata:
+      labels:
+        app: mongo-prep
+    spec:
+      containers:
+        - name: mongo-prep
+          image: mongo:7.0
+          ports:
+            - containerPort: 27017
+          env:
+            - name: MONGO_INITDB_ROOT_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  name: mongo-prep-credentials
+                  key: username
+            - name: MONGO_INITDB_ROOT_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: mongo-prep-credentials
+                  key: password
+          volumeMounts:
+            - name: mongo-prep-data
+              mountPath: /data/db
+          resources:
+            requests:
+              cpu: 150m
+              memory: 256Mi
+            limits:
+              cpu: 400m
+              memory: 512Mi
+  volumeClaimTemplates:
+    - metadata:
+        name: mongo-prep-data
+      spec:
+        accessModes:
+          - ReadWriteOnce
+        resources:
+          requests:
+            storage: 5Gi

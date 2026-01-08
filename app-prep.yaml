@@ -18,13 +18,6 @@ spec:
           env:
             - name: ASPNETCORE_HTTP_PORTS
               value: "80"
-            - name: REDIS_PASSWORD
-              valueFrom:
-                secretKeyRef:
-                  name: redis-id-credentials
-                  key: password
-            - name: ConnectionStrings__redis
-              value: "redis-id:6379,password=$(REDIS_PASSWORD)"
             - name: MONGODB_USERNAME
               valueFrom:
                 secretKeyRef:

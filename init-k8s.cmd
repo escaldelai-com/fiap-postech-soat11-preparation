@@ -9,3 +9,4 @@ REM -- App
 kubectl apply -f app-prep-service.yaml
 kubectl apply -f app-prep-ingress.yaml
 kubectl apply -f app-prep.yaml
+

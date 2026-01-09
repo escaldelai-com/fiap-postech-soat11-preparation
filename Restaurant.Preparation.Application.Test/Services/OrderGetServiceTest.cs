@@ -1,0 +1,46 @@
+﻿using FluentAssertions;
+using Moq;
+using Restaurant.Preparation.Application.DTO;
+using Restaurant.Preparation.Application.Interfaces.Repository;
+using Restaurant.Preparation.Application.Services;
+using Restaurant.Preparation.Model;
+
+namespace Restaurant.Preparation.Application.Test;
+
+public class OrderGetServiceTest : TestBase
+{
+
+    [Fact]
+    public async Task OrderGetService_Ok()
+    {
+        // Arrange
+        var repo = new Mock<IOrderRepository>();
+        var service = new OrderGetService(repo.Object);
+        var orderId = GetGuid();
+        var order = new OrderDto { Id = orderId };
+        repo.Setup(x => x.Get(orderId)).ReturnsAsync(order);
+
+        // Act
+        var result = await service.Get(orderId);
+
+        // Assert
+        result.Should().BeEquivalentTo(order);
+    }
+
+    [Fact]
+    public async Task OrderGetService_Not_Found()
+    {
+        // Arrange
+        var repo = new Mock<IOrderRepository>();
+        var service = new OrderGetService(repo.Object);
+        var orderId = GetGuid();
+        repo.Setup(x => x.Get(orderId)).ReturnsAsync(() => null);
+
+        // Act
+        var act = () => service.Get(orderId);
+
+        // Assert
+        await act.Should().ThrowAsync<NotFoundException>();
+    }
+
+}

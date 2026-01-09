@@ -1,0 +1,42 @@
+<Solution>
+  <Folder Name="/adapters/" />
+  <Folder Name="/adapters/input/">
+    <Project Path="Restaurant.Preparation.Facade/Restaurant.Preparation.Facade.csproj" Id="8de110a3-34d9-486e-aba2-d893d9009dea" />
+    <Project Path="Restaurant.Preparation.Presenter/Restaurant.Preparation.Presenter.csproj" Id="ac4b458a-b712-4ea8-83d3-a12c6041d364" />
+    <Project Path="Restaurant.Preparation.WebApi/Restaurant.Preparation.WebApi.csproj" Id="e1792e95-b2cd-4a39-ac39-75c62ba016a4" />
+  </Folder>
+  <Folder Name="/adapters/output/">
+    <Project Path="Restaurant.Preparation.Data/Restaurant.Preparation.Data.csproj" Id="4564d22a-3d54-4e2d-a9a0-548ee90ca068" />
+    <Project Path="Restaurant.Preparation.ExternalServices/Restaurant.Preparation.ExternalServices.csproj" Id="f71a65db-dfc1-4752-a6f9-712b0619c890" />
+  </Folder>
+  <Folder Name="/core/">
+    <Project Path="Restaurant.Preparation.Application/Restaurant.Preparation.Application.csproj" Id="a51cea15-dcb7-4008-8a52-8c1e694d78e2" />
+    <Project Path="Restaurant.Preparation.Model/Restaurant.Preparation.Model.csproj" Id="ba101e78-a2dc-4f97-b4dc-ff292bfdb7a7" />
+  </Folder>
+  <Folder Name="/Solution Items/">
+    <File Path="LICENSE" />
+    <File Path="README.md" />
+  </Folder>
+  <Folder Name="/Solution Items/github-workflows/">
+    <File Path=".github/workflows/build-and-test.yml" />
+    <File Path=".github/workflows/publish.yml" />
+  </Folder>
+  <Folder Name="/Solution Items/kubernetes/">
+    <File Path="init-k8s.cmd" />
+  </Folder>
+  <Folder Name="/Solution Items/kubernetes/app/">
+    <File Path="app-prep-ingress.yaml" />
+    <File Path="app-prep-service.yaml" />
+    <File Path="app-prep.yaml" />
+    <File Path="Dockerfile" />
+  </Folder>
+  <Folder Name="/Solution Items/kubernetes/mongodb/">
+    <File Path="mongo-prep-secrets.yaml" />
+    <File Path="mongo-prep-service.yaml" />
+    <File Path="mongo-prep.yaml" />
+  </Folder>
+  <Folder Name="/test/">
+    <Project Path="Restaurant.Preparation.Application.Test/Restaurant.Preparation.Application.Test.csproj" Id="b8267267-bea2-4e29-8f93-5071ddb203d2" />
+    <Project Path="Restaurant.Preparation.Model.Test/Restaurant.Preparation.Model.Test.csproj" Id="451d7098-ebdb-4a58-8312-ac6138222715" />
+  </Folder>
+</Solution>

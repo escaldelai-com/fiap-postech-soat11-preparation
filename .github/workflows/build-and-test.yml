@@ -28,7 +28,7 @@ jobs:
         run: dotnet build Restaurant.Preparation.slnx --configuration Release --no-restore
 
       - name: Run model tests
-        run: dotnet test Restaurant.Preparation.Model.Test/Restaurant.Preparation.Model.Test.csproj --configuration Release --no-build
+        run: dotnet test Restaurant.Preparation.Domain.Test/Restaurant.Preparation.Domain.Test.csproj --configuration Release --no-build
 
       - name: Run application tests
         run: dotnet test Restaurant.Preparation.Application.Test/Restaurant.Preparation.Application.Test.csproj --configuration Release --no-build

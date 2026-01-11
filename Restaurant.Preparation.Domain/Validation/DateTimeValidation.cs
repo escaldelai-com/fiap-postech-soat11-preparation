@@ -1,4 +1,4 @@
-﻿namespace Restaurant.Preparation.Model;
+﻿namespace Restaurant.Preparation.Domain;
 
 public static class DateTimeValidation
 {

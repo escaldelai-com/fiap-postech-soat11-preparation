@@ -1,4 +1,4 @@
-﻿namespace Restaurant.Preparation.Model;
+﻿namespace Restaurant.Preparation.Domain;
 
 public class OrderStatusException(string status, string operation) : Exception
 {

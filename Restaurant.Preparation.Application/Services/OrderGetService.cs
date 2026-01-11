@@ -1,7 +1,7 @@
 ﻿using Restaurant.Preparation.Application.DTO;
 using Restaurant.Preparation.Application.Interfaces.Repository;
 using Restaurant.Preparation.Application.Interfaces.Services;
-using Restaurant.Preparation.Model;
+using Restaurant.Preparation.Domain;
 
 namespace Restaurant.Preparation.Application.Services;
 

@@ -12,7 +12,7 @@ Esse microsserviço é responsável por gerenciar a preparação do pedido na co
 `dotnet build Restaurant.Preparation.WebApi/Restaurant.Preparation.WebApi.csproj`
 
 ### Testes
-`dotnet test Restaurant.Preparation.Model.Test/Restaurant.Preparation.Model.Test.csproj`
+`dotnet test Restaurant.Preparation.Domain.Test/Restaurant.Preparation.Domain.Test.csproj`
 
 `dotnet test Restaurant.Preparation.Application.Test/Restaurant.Preparation.Application.Test.csproj`
 

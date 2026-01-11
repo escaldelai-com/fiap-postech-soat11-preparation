@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Restaurant.Preparation.Model;
+using Restaurant.Preparation.Domain;
 using System.Net;
 
 namespace Restaurant.Preparation.WebApi.Middleware;

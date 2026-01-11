@@ -1,7 +1,7 @@
 ﻿using Bogus;
 using FluentAssertions;
 
-namespace Restaurant.Preparation.Model.Test;
+namespace Restaurant.Preparation.Domain.Test;
 
 public class OrderItemTest : TestBase
 {

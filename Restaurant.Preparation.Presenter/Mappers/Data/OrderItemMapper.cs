@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using Restaurant.Preparation.Application.DTO;
-using Restaurant.Preparation.Model;
+using Restaurant.Preparation.Domain;
 
 namespace Restaurant.Preparation.Presenter.Mappers;
 

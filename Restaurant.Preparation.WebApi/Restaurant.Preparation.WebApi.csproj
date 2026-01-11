@@ -19,7 +19,7 @@
     <ProjectReference Include="..\Restaurant.Preparation.Data\Restaurant.Preparation.Data.csproj" />
     <ProjectReference Include="..\Restaurant.Preparation.ExternalServices\Restaurant.Preparation.ExternalServices.csproj" />
     <ProjectReference Include="..\Restaurant.Preparation.Facade\Restaurant.Preparation.Facade.csproj" />
-    <ProjectReference Include="..\Restaurant.Preparation.Model\Restaurant.Preparation.Model.csproj" />
+    <ProjectReference Include="..\Restaurant.Preparation.Domain\Restaurant.Preparation.Domain.csproj" />
     <ProjectReference Include="..\Restaurant.Preparation.Presenter\Restaurant.Preparation.Presenter.csproj" />
   </ItemGroup>
 

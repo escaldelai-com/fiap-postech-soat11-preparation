@@ -1,6 +1,6 @@
 ﻿using Bogus;
 
-namespace Restaurant.Preparation.Model.Test;
+namespace Restaurant.Preparation.Domain.Test;
 
 public abstract class TestBase
 {

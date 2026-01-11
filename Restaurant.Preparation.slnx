@@ -37,6 +37,6 @@
   </Folder>
   <Folder Name="/test/">
     <Project Path="Restaurant.Preparation.Application.Test/Restaurant.Preparation.Application.Test.csproj" Id="b8267267-bea2-4e29-8f93-5071ddb203d2" />
-    <Project Path="Restaurant.Preparation.Model.Test/Restaurant.Preparation.Domain.Test.csproj" Id="451d7098-ebdb-4a58-8312-ac6138222715" />
+    <Project Path="Restaurant.Preparation.Domain.Test/Restaurant.Preparation.Domain.Test.csproj" />
   </Folder>
 </Solution>
